@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>輔具補助項目表</title>
+  <style>
+    body {
+      font-family: "Noto Sans TC", sans-serif;
+      background: #fffaf0;
+      color: #333;
+      padding: 16px;
+      line-height: 1.5;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 16px;
+    }
+    header img {
+      max-width: 200px;
+    }
+    h1 {
+      font-size: 24px;
+      margin: 12px 0 0;
+    }
+    #search {
+      display: block;
+      margin: 20px auto;
+      max-width: 400px;
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+      margin-bottom: 32px;
+    }
+    thead {
+      background-color: #f4e2d8;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 12px 8px;
+      vertical-align: middle;
+    }
+    td:nth-child(2) {
+      text-align: left;
+    }
+    th {
+      text-align: center;
+    }
+    td:not(:nth-child(2)) {
+      text-align: center;
+    }
+    tbody tr:nth-child(even) {
+      background-color: #fdf6f2;
+    }
+    footer {
+      text-align: center;
+      font-size: 13px;
+      color: #666;
+      border-top: 1px solid #ccc;
+      padding-top: 20px;
+      margin-top: 40px;
+    }
+    @media (max-width: 768px) {
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+      thead {
+        display: none;
+      }
+      td {
+        position: relative;
+        padding-left: 50%;
+        text-align: left !important;
+      }
+      td::before {
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        width: 45%;
+        white-space: nowrap;
+        font-weight: bold;
+      }
+      td:nth-of-type(1)::before { content: "編號"; }
+      td:nth-of-type(2)::before { content: "輔具項目"; }
+      td:nth-of-type(3)::before { content: "一般戶"; }
+      td:nth-of-type(4)::before { content: "中低收入戶"; }
+      td:nth-of-type(5)::before { content: "低收入戶"; }
+    }
+@media (max-width: 768px) {
+  body {
+    font-size: 17px;
+  }
+
+  #search {
+    font-size: 18px;
+    padding: 14px;
+  }
+
+  table {
+    font-size: 16px;
+  }
+
+  td {
+    padding: 16px 12px;
+  }
+
+  footer {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+}
+
+.footer-qr img {
+  max-width: 120px;
+  height: auto;
+  display: block;
+  margin: 12px auto;
+}
+
+@media (max-width: 768px) {
+  .footer-qr img {
+    max-width: 160px;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <img src="images/LOGO-無色.png" alt="品牌LOGO">
+  <h1>輔具補助項目與金額一覽表</h1>
+</header>
+
+
+  <input type="text" id="search" placeholder="🔍 搜尋輔具項目名稱...">
+
+  <table id="subsidyTable">
+    <thead>
+      <tr>
+        <th>編號</th>
+        <th>輔具項目</th>
+        <th>一般戶</th>
+        <th>中低收入戶</th>
+        <th>低收入戶</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>EA01</td><td>馬桶增高器、便盆椅和沐浴椅</td><td>840</td><td>1080</td><td>1200</td></tr>
+      <tr><td>EB01</td><td>單支枴杖-不銹鋼製</td><td>700</td><td>900</td><td>1000</td></tr>
+      <tr><td>EB02</td><td>單支枴杖-鋁製</td><td>350</td><td>450</td><td>500</td></tr>
+      <tr><td>EB03</td><td>助行器</td><td>560</td><td>720</td><td>800</td></tr>
+      <tr><td>EB04</td><td>帶輪型助步車（助行椅）</td><td>2100</td><td>2700</td><td>3000</td></tr>
+      <tr><td>EC01</td><td>輪椅-A款</td><td>2450</td><td>3150</td><td>3500</td></tr>
+      <tr><td>EC02</td><td>輪椅-B款</td><td>2800</td><td>3600</td><td>4000</td></tr>
+      <tr><td>EC03</td><td>輪椅-C款</td><td>9000</td><td>9000</td><td>9000</td></tr>
+      <tr><td>EC04</td><td>輪椅附加功能-A款(具利於移位功能)</td><td>5000</td><td>5000</td><td>5000</td></tr>
+      <tr><td>EC05</td><td>輪椅附加功能-B款(具仰躺功能</td><td>2000</td><td>2000</td><td>2000</td></tr>
+      <tr><td>EC06</td><td>輪椅附加功能-C款(具空中傾倒功能)</td><td>4000</td><td>4000</td><td>4000</td></tr>
+      <tr><td>EC07</td><td>擺位系統-A款(平面型輪椅背靠)</td><td>1000</td><td>1000</td><td>1000</td></tr>
+      <tr><td>EC08</td><td>擺位系統-B款(曲面適形輪椅背靠)</td><td>6000</td><td>6000</td><td>6000</td></tr>
+      <tr><td>EC09</td><td>擺位系統-C款(輪椅軀幹側支撐架)</td><td>3000</td><td>3000</td><td>3000</td></tr>
+      <tr><td>EC10</td><td>擺位系統-D款(輪椅頭靠系統)</td><td>2500</td><td>2500</td><td>2500</td></tr>
+      <tr><td>EG03</td><td>輪椅座墊-A款(連通管型氣囊氣墊座-塑膠材質)</td><td>5000</td><td>5000</td><td>5000</td></tr>
+      <tr><td>EG04</td><td>輪椅座墊-B款(連通管型氣囊氣墊座-橡膠材質)</td><td>10000</td><td>10000</td><td>10000</td></tr>
+      <tr><td>EG05</td><td>輪椅座墊-C款(液態凝膠座墊)</td><td>10000</td><td>10000</td><td>10000</td></tr>
+      <tr><td>EG06</td><td>輪椅座墊-D款(固態凝膠座墊)</td><td>8000</td><td>8000</td><td>8000</td></tr>
+      <tr><td>EG07</td><td>輪椅座墊-E款(填充式氣囊氣墊座)</td><td>8000</td><td>8000</td><td>8000</td></tr>
+      <tr><td>EG08</td><td>輪椅座墊-F款(交替充氣型座墊)</td><td>5000</td><td>5000</td><td>5000</td></tr>
+      <tr><td>EG09</td><td>輪椅座墊-G款(量製型座墊)</td><td>10000</td><td>10000</td><td>10000</td></tr>
+      <tr><td>EC11</td><td>電動輪椅</td><td colspan="3">限租賃</td></tr>
+      <tr><td>EC12</td><td>電動代步車</td><td colspan="3">限租賃</td></tr>
+      <tr><td>ED01</td><td>移位腰帶</td><td>1050</td><td>1350</td><td>1500</td></tr>
+      <tr><td>ED02</td><td>移位板</td><td>1400</td><td>1800</td><td>2000</td></tr>
+      <tr><td>ED03</td><td>人力移位吊帶</td><td>2800</td><td>3600</td><td>4000</td></tr>
+      <tr><td>ED04</td><td>移位滑墊-A款</td><td>2700</td><td>2100</td><td>3000</td></tr>
+      <tr><td>ED05</td><td>移位滑墊-B款</td><td>7200</td><td>5600</td><td>8000</td></tr>
+      <tr><td>ED07</td><td>移位機</td><td>28000</td><td>36000</td><td>40000</td></tr>
+      <tr><td>ED08</td><td>移位機吊帶</td><td>4200</td><td>5400</td><td>6000</td></tr>
+      <tr><td>EH01</td><td>居家用照顧床</td><td>5600</td><td>7200</td><td>8000</td></tr>
+      <tr><td>EH02</td><td>居家用照顧床-附加功能A款</td><td>3500</td><td>4500</td><td>5000</td></tr>
+      <tr><td>EH03</td><td>居家用照顧床-附加功能B款</td><td>3500</td><td>4500</td><td>5000</td></tr>
+      <tr><td>EG01</td><td>氣墊床-A款</td><td>8000</td><td>8000</td><td>8000</td></tr>
+      <tr><td>EG02</td><td>氣墊床-B款</td><td>12000</td><td>12000</td><td>12000</td></tr>
+    </tbody>
+  </table>
+
+ <footer>
+  <p><strong>柚築股份有限公司｜輔具補助查詢平台</strong></p>
+  <p>地址：桃園市桃園區正康二街36號</p>
+  <p>電話：03-3363431　｜　LINE官方帳號：@856xeloi</p>
+
+  <div class="footer-qr">
+    <a href="https://line.me/R/ti/p/%40856xeloi" target="_blank">
+      <img src="images/L_gainfriends_2dbarcodes_BW.png" alt="LINE QR Code">
+    </a>
+  </div>
+
+  <p>© 2025 柚築股份有限公司 YUCHU Carelab. All rights reserved.</p>
+</footer>
+
+  <script>
+    const searchInput = document.getElementById('search');
+    const table = document.getElementById('subsidyTable');
+    const rows = table.querySelectorAll('tbody tr');
+
+    searchInput.addEventListener('input', function () {
+      const keyword = this.value.toLowerCase();
+      rows.forEach(row => {
+        const itemName = row.children[1].textContent.toLowerCase();
+        row.style.display = itemName.includes(keyword) ? '' : 'none';
+      });
+    });
+  </script>
+</body>
+</html>
