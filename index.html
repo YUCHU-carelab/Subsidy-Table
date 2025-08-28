@@ -115,6 +115,22 @@
       display: block;
       margin: 12px auto;
     }
+
+.scroll-container {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /* 提升 iOS 上的滾動流暢度 */
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 16px;
+  padding-bottom: 12px;
+}
+
+.scroll-container .card {
+  min-width: 280px;
+  flex-shrink: 0;
+}
+
+
   </style>
 </head>
 <body>
@@ -125,17 +141,20 @@
 
   <input type="text" id="search" placeholder="🔍 搜尋輔具項目名稱...">
 
-  <div class="table-container">
-    <table id="subsidyTable">
-      <thead>
-        <tr>
-          <th>編號</th>
-          <th>輔具項目</th>
-          <th>一般戶</th>
-          <th>中低收入戶</th>
-          <th>低收入戶</th>
-        </tr>
-      </thead>
+  <div class="table-scroll">
+  <table>
+    <!-- 表格標題列 -->
+    <thead>
+      <tr>
+        <th>編號</th>
+        <th>輔具項目</th>
+        <th>一般戶</th>
+        <th>中低收入戶</th>
+        <th>低收入戶</th>
+        <th>自填金額</th>
+        <th>應付金額</th>
+      </tr>
+    </thead>
     <tbody>
       <tr><td>EA01</td><td>馬桶增高器、便盆椅和沐浴椅</td><td>840</td><td>1080</td><td>1200</td></tr>
       <tr><td>EB01</td><td>單支枴杖-不銹鋼製</td><td>700</td><td>900</td><td>1000</td></tr>
@@ -173,8 +192,9 @@
       <tr><td>EH03</td><td>居家用照顧床-附加功能B款</td><td>3500</td><td>4500</td><td>5000</td></tr>
       <tr><td>EG01</td><td>氣墊床-A款</td><td>8000</td><td>8000</td><td>8000</td></tr>
       <tr><td>EG02</td><td>氣墊床-B款</td><td>12000</td><td>12000</td><td>12000</td></tr>
-    </tbody>
+     </tbody>
   </table>
+</div>
 
  <footer>
   <p><strong>柚築股份有限公司｜輔具補助查詢平台</strong></p>
