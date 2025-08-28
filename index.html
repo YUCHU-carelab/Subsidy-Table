@@ -12,17 +12,21 @@
       padding: 16px;
       line-height: 1.5;
     }
+
     header {
       text-align: center;
       margin-bottom: 16px;
     }
+
     header img {
       max-width: 200px;
     }
+
     h1 {
       font-size: 24px;
       margin: 12px 0 0;
     }
+
     #search {
       display: block;
       margin: 20px auto;
@@ -33,32 +37,45 @@
       border: 1px solid #ccc;
       border-radius: 4px;
     }
+
+    .table-container {
+      overflow-x: auto;
+    }
+
     table {
       width: 100%;
       border-collapse: collapse;
       font-size: 14px;
       margin-bottom: 32px;
+      min-width: 600px;
     }
+
     thead {
       background-color: #f4e2d8;
     }
+
     th, td {
       border: 1px solid #ccc;
       padding: 12px 8px;
       vertical-align: middle;
     }
+
     td:nth-child(2) {
       text-align: left;
     }
+
     th {
       text-align: center;
     }
+
     td:not(:nth-child(2)) {
       text-align: center;
     }
+
     tbody tr:nth-child(even) {
       background-color: #fdf6f2;
     }
+
     footer {
       text-align: center;
       font-size: 13px;
@@ -67,106 +84,58 @@
       padding-top: 20px;
       margin-top: 40px;
     }
+
     @media (max-width: 768px) {
-      table, thead, tbody, th, td, tr {
-        display: block;
+      body {
+        font-size: 17px;
       }
-      thead {
-        display: none;
+
+      #search {
+        font-size: 18px;
+        padding: 14px;
       }
+
+      table {
+        font-size: 16px;
+      }
+
       td {
-        position: relative;
-        padding-left: 50%;
-        text-align: left !important;
+        padding: 16px 12px;
       }
-      td::before {
-        position: absolute;
-        top: 8px;
-        left: 8px;
-        width: 45%;
-        white-space: nowrap;
-        font-weight: bold;
+
+      footer {
+        font-size: 15px;
+        line-height: 1.8;
       }
-      td:nth-of-type(1)::before { content: "編號"; }
-      td:nth-of-type(2)::before { content: "輔具項目"; }
-      td:nth-of-type(3)::before { content: "一般戶"; }
-      td:nth-of-type(4)::before { content: "中低收入戶"; }
-      td:nth-of-type(5)::before { content: "低收入戶"; }
     }
-@media (max-width: 768px) {
-  body {
-    font-size: 17px;
-  }
 
-  #search {
-    font-size: 18px;
-    padding: 14px;
-  }
-
-  table {
-    font-size: 16px;
-  }
-
-  td {
-    padding: 16px 12px;
-  }
-
-  footer {
-    font-size: 15px;
-    line-height: 1.8;
-  }
-}
-
-.footer-qr img {
-  max-width: 120px;
-  height: auto;
-  display: block;
-  margin: 12px auto;
-}
-
-@media (max-width: 768px) {
-  td {
-    border: 1px solid #ddd;
-    margin-bottom: 12px;
-    background-color: #fff;
-    padding: 16px 12px;
-    border-radius: 8px;
-  }
-
-  tbody tr {
-    margin-bottom: 16px;
-    border-bottom: 2px solid #f4e2d8;
-  }
-
-  td::before {
-    color: #666;
-    font-size: 14px;
-    margin-bottom: 4px;
-    display: block;
-  }
-}
-
+    .footer-qr img {
+      max-width: 120px;
+      height: auto;
+      display: block;
+      margin: 12px auto;
+    }
   </style>
 </head>
 <body>
   <header>
     <img src="images/LOGO-無色.png" alt="品牌LOGO">
-  <h1>輔具補助項目與金額一覽表</h1>
-</header>
-
+    <h1>輔具補助項目與金額一覽表</h1>
+  </header>
 
   <input type="text" id="search" placeholder="🔍 搜尋輔具項目名稱...">
 
-  <table id="subsidyTable">
-    <thead>
-      <tr>
-        <th>編號</th>
-        <th>輔具項目</th>
-        <th>一般戶</th>
-        <th>中低收入戶</th>
-        <th>低收入戶</th>
-      </tr>
-    </thead>
+  <div class="table-container">
+    <table id="subsidyTable">
+      <thead>
+        <tr>
+          <th>編號</th>
+          <th>輔具項目</th>
+          <th>一般戶</th>
+          <th>中低收入戶</th>
+          <th>低收入戶</th>
+        </tr>
+      </thead>
     <tbody>
       <tr><td>EA01</td><td>馬桶增高器、便盆椅和沐浴椅</td><td>840</td><td>1080</td><td>1200</td></tr>
       <tr><td>EB01</td><td>單支枴杖-不銹鋼製</td><td>700</td><td>900</td><td>1000</td></tr>
